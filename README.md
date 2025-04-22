@@ -2,8 +2,6 @@
 
 Displays the current moon phase, illumination, and other lunar details in Übersicht on macOS. Automatically refreshes twice a day and visualizes data with a themed interface and a moon image.
 
----
-
 ## Requirements
 
 ### macOS System
@@ -19,8 +17,6 @@ Displays the current moon phase, illumination, and other lunar details in Übers
   ```sh
   chmod +x LunaPhase.widget/script.sh
   ```
-
----
 
 ## 📁 Folder Structure
 
@@ -38,8 +34,6 @@ LunaPhase.widget/
 └── node_modules/
     └── suncalc/
 ```
-
----
 
 ## Setting Up Node.js Support (`suncalc`)
 
@@ -78,8 +72,6 @@ This widget uses the [`suncalc`](https://www.npmjs.com/package/suncalc) Node.js 
    ./script.sh
    ```
 
----
-
 ## 🌔 How the Widget Chooses the Moon Phase Image
 
 The widget uses `suncalc` to calculate the current moon phase as a value from `0.0` to `1.0`, which is then mapped to one of eight common moon phases:
@@ -94,8 +86,6 @@ const moonPhases = [
 const phaseIndex = Math.floor(moonIllumination.phase * 8);
 const moonPhase = moonPhases[phaseIndex];
 ```
-
----
 
 ## Moon Image Selection
 
@@ -112,8 +102,6 @@ Example usage:
 cp images/${moonPhase}.png tmp/current_moon.png
 ```
 
----
-
 ### Extend It Yourself (If you like)
 
 Advanced users can modify the widget to fetch **daily-updated images from NASA** using their public web assets.
@@ -126,15 +114,12 @@ curl -o tmp/current_moon.png "https://moon.nasa.gov/system/feature_items/images/
 
 **Note**: This logic is **not implemented by default**, but you can build it into `script.sh` if desired.
 
----
 
 ## Fonts & Styling
 
 - Uses the `Epilogue` font family
 - Font files (`.woff2`) must exist in `fonts/` and be referenced correctly
 - The moon image is displayed in a circular frame with styled text overlays
-
----
 
 ## Troubleshooting
 
@@ -146,7 +131,6 @@ curl -o tmp/current_moon.png "https://moon.nasa.gov/system/feature_items/images/
 | Fonts not working | Missing or misnamed `.woff2` files | Check file paths and `font-family` references |
 | No moon image | Image not created | Ensure `script.sh` creates `tmp/current_moon.png` |
 
----
 
 ## Quick Summary
 
@@ -169,12 +153,8 @@ This widget was inspired by multiple community projects, specifically:
   - MoonMini (forked from MoonGiant by @unklar on GitHub)
   - Bargraph Lua by Wlouf on DeviantArt
 
----
-
-This LunaPhase widget is a custom Übersicht implementation that borrows conceptual ideas from these projects but is built using JavaScript, Node.js, and NASA image sources.  
+**This LunaPhase widget** is a custom Übersicht implementation that borrows conceptual ideas from these projects but is built using JavaScript, Node.js, and NASA image sources.  
 This widget itself is released into the public domain under The Unlicense.
-
----
 
 ## Images
 
@@ -183,7 +163,6 @@ They are used under NASA’s public domain guidelines for non-commercial, educat
 
 NASA does not endorse this widget or any derivative use.
 
----
 
 ## License
 
