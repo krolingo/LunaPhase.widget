@@ -161,8 +161,6 @@ curl -o tmp/current_moon.png "https://moon.nasa.gov/system/feature_items/images/
 
 This widget was inspired by multiple community projects, specifically:
 
----
-
 **ASTRO_NERD**  
 - Author: Tink-rs (A girl who loves Conky & Coding)  
 - License: GNU GPLv3 – 2022  
